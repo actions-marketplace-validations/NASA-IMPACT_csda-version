@@ -8,11 +8,14 @@ outputs:
   version:
     description: The next CSDA version
     value: ${{ steps.calculate.outputs.version }}
+  release-please-config:
+    description: Path to the release-please config file
+    value: ${{ steps.release-please-config.outputs.config-file }}
 
 runs:
   using: composite
   steps:
-    - uses: actions/setup-python@v6
+    - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6.3.0
       with:
         python-version: "3.13"
     - name: Install
@@ -31,10 +34,15 @@ runs:
       shell: bash
       id: csda-version
       run: |
-        CSDA_VERSION=$(curl -s https://raw.githubusercontent.com/gadomski/csda-version/refs/heads/main/csda-version.txt | tr -d '[:space:]')
+        CSDA_VERSION=$(curl -s https://raw.githubusercontent.com/NASA-IMPACT/csda-version/refs/heads/main/csda-version.txt | tr -d '[:space:]')
         echo "version=$CSDA_VERSION" >> "$GITHUB_OUTPUT"
     - id: calculate
       shell: bash
       run: |
         NEXT_VERSION=$(csda-version next-version "${{ steps.csda-version.outputs.version }}" "${{ steps.last-tag.outputs.tag }}")
         echo "version=$NEXT_VERSION" >> "$GITHUB_OUTPUT"
+    - name: release-please config
+      id: release-please-config
+      shell: bash
+      run: |
+        echo "config-file=release-please-config.json" >> "$GITHUB_OUTPUT"

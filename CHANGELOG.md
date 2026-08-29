@@ -1,5 +1,98 @@
 # Changelog
 
+## [0.4.3](https://github.com/NASA-IMPACT/csda-version/compare/v0.4.2...v0.4.3) (2026-07-16)
+
+
+### Chores
+
+* bump version to 26.4.0 ([#88](https://github.com/NASA-IMPACT/csda-version/issues/88)) ([32f4ca9](https://github.com/NASA-IMPACT/csda-version/commit/32f4ca943bf97cccc0f90533c1dc9aecad587ce8))
+* remove CODEOWNERS ([#87](https://github.com/NASA-IMPACT/csda-version/issues/87)) ([42f93f2](https://github.com/NASA-IMPACT/csda-version/commit/42f93f2d074660044942cc4e7109776dd2bd7c71))
+* update dependabot configuration ([#83](https://github.com/NASA-IMPACT/csda-version/issues/83)) ([436b41b](https://github.com/NASA-IMPACT/csda-version/commit/436b41bc2e0e6c5ed36ce979b8cbe7b75bca4b1a))
+
+## [0.4.2](https://github.com/NASA-IMPACT/csda-version/compare/v0.4.1...v0.4.2) (2026-06-29)
+
+
+### Bug Fixes
+
+* **chore:** update version tags with commit SHAs ([#77](https://github.com/NASA-IMPACT/csda-version/issues/77)) ([d2327e4](https://github.com/NASA-IMPACT/csda-version/commit/d2327e4e63484eae50c36427bfc84531f3e46cba))
+
+
+### Chores
+
+* bump version to 26.3.7 ([#79](https://github.com/NASA-IMPACT/csda-version/issues/79)) ([81d4547](https://github.com/NASA-IMPACT/csda-version/commit/81d4547ba3d22a2198dfd96850dcc28ff59182f7))
+
+## [0.4.1](https://github.com/NASA-IMPACT/csda-version/compare/v0.4.0...v0.4.1) (2026-06-15)
+
+
+### Chores
+
+* bump version to 26.3.6 ([#70](https://github.com/NASA-IMPACT/csda-version/issues/70)) ([aa44554](https://github.com/NASA-IMPACT/csda-version/commit/aa445544c73b06f34093f63ff09d71dcb7edb832))
+
+## [0.4.0](https://github.com/NASA-IMPACT/csda-version/compare/v0.3.0...v0.4.0) (2026-06-01)
+
+
+### Features
+
+* **chore:** add troubleshooting guide ([#64](https://github.com/NASA-IMPACT/csda-version/issues/64)) ([85fbc36](https://github.com/NASA-IMPACT/csda-version/commit/85fbc36b492f449af91149f3029df67a23cf494d))
+
+## [0.3.0](https://github.com/NASA-IMPACT/csda-version/compare/v0.2.11...v0.3.0) (2026-06-01)
+
+
+### Features
+
+* **docs:** add commit message convention documentation ([#63](https://github.com/NASA-IMPACT/csda-version/issues/63)) ([8f821cc](https://github.com/NASA-IMPACT/csda-version/commit/8f821cc7daed53f5018dad9dff629455671a1959))
+
+
+### Chores
+
+* bump version to 26.3.5 ([#66](https://github.com/NASA-IMPACT/csda-version/issues/66)) ([dec7f93](https://github.com/NASA-IMPACT/csda-version/commit/dec7f93450f9c15773a70bd76a6fa90b4805813c))
+
+## [0.2.11](https://github.com/NASA-IMPACT/csda-version/compare/v0.2.10...v0.2.11) (2026-05-20)
+
+
+### Chores
+
+* update dependabot to use uv support ([#53](https://github.com/NASA-IMPACT/csda-version/issues/53)) ([7acfb24](https://github.com/NASA-IMPACT/csda-version/commit/7acfb245e90dbcf29edf1167a3d2cc1bbf0ca27e))
+
+## [0.2.10](https://github.com/NASA-IMPACT/csda-version/compare/v0.2.9...v0.2.10) (2026-05-18)
+
+
+### Chores
+
+* bump version to 26.3.3 ([#51](https://github.com/NASA-IMPACT/csda-version/issues/51)) ([fc0f004](https://github.com/NASA-IMPACT/csda-version/commit/fc0f004ef680e0da1ebf8423749b34c36d78f7b6))
+* bump version to 26.3.4 ([#54](https://github.com/NASA-IMPACT/csda-version/issues/54)) ([d2eeda1](https://github.com/NASA-IMPACT/csda-version/commit/d2eeda1e9baa222279a94932b5048b7c808ee64f))
+
+## [0.2.9](https://github.com/NASA-IMPACT/csda-version/compare/v0.2.8...v0.2.9) (2026-05-01)
+
+
+### Bug Fixes
+
+* reference to correct txt file ([#49](https://github.com/NASA-IMPACT/csda-version/issues/49)) ([d310127](https://github.com/NASA-IMPACT/csda-version/commit/d310127e1f19be55353ea209f85814a590658b4a))
+
+## [0.2.8](https://github.com/NASA-IMPACT/csda-version/compare/v0.2.7...v0.2.8) (2026-04-27)
+
+
+### Chores
+
+* add release please config action input ([#45](https://github.com/NASA-IMPACT/csda-version/issues/45)) ([5eabade](https://github.com/NASA-IMPACT/csda-version/commit/5eabade3c3c23138bdd58bec93389b93cba43d9d))
+
+## [0.2.7](https://github.com/NASA-IMPACT/csda-version/compare/v0.2.6...v0.2.7) (2026-04-20)
+
+
+### Chores
+
+* add commit prefixes ([#42](https://github.com/NASA-IMPACT/csda-version/issues/42)) ([39d4e34](https://github.com/NASA-IMPACT/csda-version/commit/39d4e347768c322866cc2ef5814c4abf8c12b820))
+* bump version ([#38](https://github.com/NASA-IMPACT/csda-version/issues/38)) ([d10da90](https://github.com/NASA-IMPACT/csda-version/commit/d10da9054f4229fd7c7769066520b14d61ce7c08))
+* bump version to 26.3.1 ([#44](https://github.com/NASA-IMPACT/csda-version/issues/44)) ([9746013](https://github.com/NASA-IMPACT/csda-version/commit/9746013b893bfb556d3e73895dc15f96e3566851))
+* update readme ([#39](https://github.com/NASA-IMPACT/csda-version/issues/39)) ([25916e4](https://github.com/NASA-IMPACT/csda-version/commit/25916e46b11afc58c2628a2d7f5820a084a207dd))
+
+## [0.2.6](https://github.com/NASA-IMPACT/csda-version/compare/v0.2.5...v0.2.6) (2026-04-06)
+
+
+### Bug Fixes
+
+* add owner and repositories inputs ([#36](https://github.com/NASA-IMPACT/csda-version/issues/36)) ([9d4c4e9](https://github.com/NASA-IMPACT/csda-version/commit/9d4c4e93c1ed9e5bce66dc547de7b3379a72b925))
+
 ## [0.2.5](https://github.com/gadomski/csda-version/compare/v0.2.4...v0.2.5) (2026-02-22)
 
 

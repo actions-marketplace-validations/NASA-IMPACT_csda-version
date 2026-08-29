@@ -1,26 +1,28 @@
 # csda-version
 
 A Github action to calculate the next [CSDA version](#csda-version) for the checked-out repository.
+
 To use with [release-please](https://github.com/googleapis/release-please):
 
 ```yaml
   steps:
-    - uses: actions/checkout@v6
     - name: CSDA Version
       id: csda-version
-      uses: gadomski/csda-version
-    - uses: googleapis/release-please-action@v4
+      uses: NASA-IMPACT/csda-version@<hash-version> # hash-version is recommended for extra security 
+    - uses: googleapis/release-please-action@<hash-version> # hash-version is recommended for extra security
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
         release-type: simple
         release-as: ${{ steps.csda-version.outputs.version }}
+        config-file: ${{ steps.csda-version.outputs.release-please-config }}
 ```
+
 
 > [!IMPORTANT]
 > You must use `release-type` in your Github Action YAML, you cannot use [Manifest Driven](https://github.com/googleapis/release-please/blob/main/docs/manifest-releaser.md) releasing.
 > This is because `release-as` is ignored for manifest-driven releases.
 
-To see this in action, check out https://github.com/gadomski/csdap-demo-repo.
+To see this _in_ action, check out https://github.com/NASA-IMPACT/csdap-frontend/blob/main/.github/workflows/release-please.yml.
 
 ## CSDA version
 
@@ -30,3 +32,32 @@ A CSDA version is formatted like `vYY.PI.SP-X`, where:
 - `PI` is the "program increment", which is like a normal calendar quarter except that PI `1` starts Oct 1
 - `SP` is the sprint number
 - `X` is the release number in this sprint
+
+> [!NOTE]
+> While the CSDA `version` _can_ be updated manually (see [example commit](https://github.com/NASA-IMPACT/csda-version/commit/d10da9054f4229fd7c7769066520b14d61ce7c08)), there is [a Github cron job](https://github.com/NASA-IMPACT/csda-version/blob/main/.github/workflows/bump-version.yml) that runs weekly to handle routine [updates](https://github.com/NASA-IMPACT/csda-version/blob/main/src/csda_version/__init__.py).
+
+### Commit Messages
+
+Release Please only recognizes `feat` and `fix` commit prefixes when generating automated releases.
+
+#### Examples
+```sh
+git commit -m "feat: add user authentication"
+git commit -m "fix: merge conflicts"
+```
+
+#### Breaking Changes
+
+Appending an exclamation mark (`!`) to the prefix will add a `BREAKING CHANGES` header to the changelog. Use this sparingly and only for changes that introduce backward incompatibility. 
+
+#### Common Prefixes
+
+For other standard commit types (such as `refactor`, `chore`, `docs`, or `revert`) pass them as a scope to `feat` or `fix`. If you need to trigger a release use:
+
+```sh
+git commit -m "fix(chore): update dependencies"
+git commit -m "feat(docs): add new documentation"
+git commit -m "feat(chore)!: breaking change in dependencies"
+```
+
+*Note: Commits without `feat` or `fix` prefixes will not trigger a new release, but they will still appear in the changelog.*
